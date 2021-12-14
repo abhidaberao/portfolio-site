@@ -1,0 +1,12 @@
+@font-face {
+  font-family: fira;
+  src: url('./assets/FiraCode-VF.ttf');
+}
+
+body {
+  margin: 10px;
+  font-family: 'fira';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1e212b;
+}
