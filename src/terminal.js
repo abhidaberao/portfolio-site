@@ -9,9 +9,9 @@ class Terminal extends React.Component{
         super(props);
         this.run = this.run.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.clear = this.clear.bind(this);
         this.state = {
             timeline : [
-                <br/>,
                 handle_dead('start'),
                 engine('banner'),
                 engine('welcome'),
@@ -25,12 +25,24 @@ class Terminal extends React.Component{
     }
 
     scrollDown(){
-        const scroll = document.getElementById("scroll");
+        const scroll = document.getElementById("bottom_spacing");
         scroll.scrollTop = scroll.scrollHeight;
     }
 
+    clear(){
+        this.setState({
+            timeline : [
+                engine('commands'),
+                handle_active(this.run)
+            ]
+        });
+    }
+
     run(command) {
-        console.log('yes');
+        if(command == 'clear'){
+            this.clear()
+        }
+        else{
         var templine = this.state.timeline;
         templine.pop();
         templine.push(handle_dead(command));
@@ -40,6 +52,7 @@ class Terminal extends React.Component{
             timeline : templine 
         });
         this.scrollDown();
+        }
     }
 
     render(){
@@ -47,6 +60,7 @@ class Terminal extends React.Component{
             <div id ="scope" onMouseDown={this.handleClick}>
                 <div id="scroll"> 
                     <ul id="timeline">{this.state.timeline}</ul>
+                    <div id="bottom_spacing"></div>
                 </div>
             </div>
         );

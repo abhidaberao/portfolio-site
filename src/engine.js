@@ -10,7 +10,7 @@ function engine(command){
             return Response('hint',getWelcomeMessage()+'\n'+getCommandList());
             break;
         case 'banner':
-            return Response('output',getBanner());
+            return ResponsePre('output',getBanner());
             break;
         case 'commands':
             return Response('hint',getCommandList());
@@ -45,6 +45,9 @@ function engine(command){
 
 
 function Response(mode,text){
+    return (<li><div className={mode}><pre class='preflow'>{text}</pre></div></li>);
+}
+function ResponsePre(mode,text){
     return (<li><div className={mode}><pre>{text}</pre></div></li>);
 }
 
@@ -59,7 +62,7 @@ function getBanner(){
      \\ \\ \\ \\ \\/\\  __/ \\_\\ \\_ \\_\\ \\_/\\ \\L\\ \\__ 
       \\ \\_\\ \\_\\ \\____\\/\\____\\/\\____\\ \\____/\\_\\
        \\/_/\\/_/\\/____/\\/____/\\/____/\\/___/\\/_/
-                                                                                          
+       
 `;
    return banner_text;
 }
@@ -75,7 +78,7 @@ function getCommandList(){
 
     var hint = 'To navigate try these commands:\n\n';
     
-    var commands = ["about","projects","github","blog","youtube","restart","commands"];
+    var commands = ["about","projects","github","blog","youtube","clear","restart","commands"];
 
     var command_list = "";
     var n = 1;

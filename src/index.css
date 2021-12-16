@@ -4,9 +4,10 @@
 }
 
 body {
-  margin: 10px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
   font-family: 'fira';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1e212b;
 }

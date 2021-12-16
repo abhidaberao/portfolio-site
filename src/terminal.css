@@ -3,50 +3,77 @@
     src: url('./assets/FiraCode-VF.ttf');
 }
 
+:root{
+    --back: #161B27;
+    --output: #C9DAEA;
+    --handle: #52FFB8;
+    --marker: #C51A4A;
+    --hint: #00BCF5;
+}
+
 * {
     font-family: fira;
     font-size:small;
 }
 
+#bottom_spacing{
+    height: 100px;
+    width: 100vw;
+    clear: both;
+}
+
 #scope{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    background-color: var(--back);
 }
 
 #scroll{
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
+    padding: 20px;
 }
 
 #timeline{
     list-style-type: none;
     margin: 0;
+    border: 0;
+    padding: 0;
 }
 
+.preflow{
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+ }
+
 .prompt_handle{
-    color: #2ec4b6;
+    color: var(--handle);
     font-weight:bold;
 }
 
 .prompt_marker{
-    color: #c52184;
+    color: var(--marker);
     font-weight: bold;
 }
 
 .output{
-    color: #fefcfd;
+    color: var(--output);
 }
 .command{
-    color: #fefcfd;
+    color: var(--output);
 }
 
 
 .hint{
-    color: #e5f77d;
+    color: var(--hint);
 }
 
 .input{
@@ -69,11 +96,3 @@
     flex-flow: row wrap;
     align-items: center;
 }
-
-.form-inline input {
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-  }
