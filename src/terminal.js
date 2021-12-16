@@ -56,8 +56,9 @@ class Terminal extends React.Component{
     }
 
     render(){
+        var ismobile = ((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))?true:false);
         return (
-            <div id ="scope" onMouseDown={this.handleClick}>
+            <div id ="scope" onMouseDown={((ismobile)?null:this.handleClick)}>
                 <div id="scroll"> 
                     <ul id="timeline">{this.state.timeline}</ul>
                     <div id="bottom_spacing"></div>

@@ -36,6 +36,9 @@ function engine(command){
             //window.open('https://www.youtube.com/channel/UCAERp_ed75UPSy0W_Yu3J0w');
             return Response('output','Blog is currently in development.');
             break;
+        case 'contact':
+            return Response('output','You can mail me at: \n\nMail : abhidaberao@protonmail.com \nLinkedIn : https://www.linkedin.com/in/abhidaberao/');
+            break;
 
         default:
             return Response('output',"the command '"+command+"' is not recognized.");
@@ -78,7 +81,7 @@ function getCommandList(){
 
     var hint = 'To navigate try these commands:\n\n';
     
-    var commands = ["about","projects","github","blog","youtube","clear","restart","commands"];
+    var commands = ["about","projects","github","blog","youtube","contact","clear","restart","commands"];
 
     var command_list = "";
     var n = 1;

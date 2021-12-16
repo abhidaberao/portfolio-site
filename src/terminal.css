@@ -29,6 +29,7 @@
     top: 0;
     left: 0;
     background-color: var(--back);
+    background-image: url('./assets/curve.svg');
 }
 
 #scroll{
