@@ -1,6 +1,6 @@
 # Portfolio Website - Bash Terminal Theme
 
-[Project Preview](preview.png)
+[Project Preview](screenshot.png)
 
 This is a web development project for my personal portfolio website, designed with a Bash terminal theme. The portfolio showcases projects, skills, and contact information in a command-line interface (CLI) style.
 
