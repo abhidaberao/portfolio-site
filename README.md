@@ -1,6 +1,6 @@
 # Portfolio Website - Bash Terminal Theme
 
-![Demo Screenshot](https://github.com/tesselwolf/terminal-portfolio-website/blob/master/screenshot.png?raw=true)
+![screenshot](https://github.com/tesselwolf/terminal-portfolio-website/assets/47315164/7292e2bf-ad93-4012-b433-6543e0f646ea)
 
 This is a web development project for my personal portfolio website, designed with a Bash terminal theme. The portfolio showcases projects, skills, and contact information in a command-line interface (CLI) style.
 
